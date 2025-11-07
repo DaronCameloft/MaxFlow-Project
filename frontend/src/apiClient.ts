@@ -8,7 +8,7 @@ import type { GraphInput, SolveResponse } from './types';
 
 // Creamos una "instancia" de axios con la URL base de tu backend
 const apiClient = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api',
+  baseURL: 'https://maxflow-backend.onrender.com',
 });
 
 // Creamos la función que llamará nuestro componente de React
