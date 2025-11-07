@@ -575,6 +575,29 @@ const onEdgeDoubleClick = useCallback(
                 );
               })}
             </ul>
+{/* --- AÑADE ESTE BLOQUE NUEVO --- */}
+            <h4>Corte Mínimo (S, T)</h4>
+            <div className="min-cut-sets">
+              <p>
+                <strong>Nodos S (alcanzables desde Fuente):</strong>
+                <span>
+                  {/* Usamos el 'nodeLabelMap' que ya teníamos para traducir los índices a letras */}
+                  {results.min_cut.S_side
+                    .map(index => nodeLabelMap.get(index) || '?')
+                    .join(', ')}
+                </span>
+              </p>
+              <p>
+                <strong>Nodos T (inalcanzables):</strong>
+                <span>
+                  {results.min_cut.T_side
+                    .map(index => nodeLabelMap.get(index) || '?')
+                    .join(', ')}
+                </span>
+              </p>
+            </div>
+            {/* --------------------------------- */}
+
           </div>
         )}
       </div>
